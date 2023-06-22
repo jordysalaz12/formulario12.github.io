@@ -4,7 +4,11 @@ body {
   width: 100vw;
   margin: 0;
   padding: 0;
+  background-image: url(img/fondoaea3.jpg);
+  background-size: cover;
+  background-repeat: unset;
 }
+
 
 .main-container {
   height: 100vh;
@@ -33,10 +37,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.main-content {
-  grid-area: main;
-  height: 20rem;
-}
+
 .sidebar {
   grid-area: aside;
   height: 20rem;
@@ -75,8 +76,10 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+
 }
 
+/*    estas son los estilos de mi nav aunque arriba esta el contenedor principal de el*/
 .element-nav li a {
   text-decoration: none;
   display: block;
@@ -145,4 +148,65 @@ body {
 
 .button-nav:active {
   background-color: #ffff00;
+}
+/*aca estara los estilos de mi contenido del main */
+.main-content {
+  grid-area: main;
+  height: rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(19rem,1fr));
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0.8rem;
+  min-width: 39.5rem;
+  
+}
+
+.foto-modelo {
+  height: 25rem;
+  width: 18rem;
+  background: whitesmoke;
+  margin: 1rem auto;
+  border: 0.5px solid white;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.foto-dimensiones {
+  height: 17rem;
+  width: 100%;
+  margin: 0 1rem;
+}
+.foto-dimensiones:hover {
+  opacity: 0.9;
+}
+.foto-dimensiones:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.descripcion-producto {
+  font-weight: bold;
+}
+.get-producto {
+  padding: 1rem 1rem;
+  background-color:none;
+  color: var(--color);
+  border-radius: 0.5rem;
+  transition: 1s ease;
+  font-size: 1rem;
+  --color: black;
+  font-weight: bold;
+  
+}
+.get-producto:hover,
+.get-producto:focus {
+  box-shadow: inset 0 0 0 2em var(--color);
+  color:yellow;
+  transform: scale(1.1);
+}
+/*
+.get-producto:hover {
+  background-color: rgb(12, 83, 12);
+  transform: scale(1.1);
 }
