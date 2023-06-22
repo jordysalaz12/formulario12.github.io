@@ -13,8 +13,6 @@ body {
   font-family: "Dosis", sans-serif;
   grid-template-areas: "header" "nav" "main" "aside" "footer";
 }
-.element-page {
-}
 
 .main-header {
   grid-area: header;
@@ -28,11 +26,11 @@ body {
   grid-area: nav;
   height: 3.75rem;
   width: 100%;
-  background: white;
+  background: black;
   padding: 0.625rem;
   font-size: 2rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .main-content {
@@ -85,8 +83,11 @@ body {
   position: relative;
   padding: 0;
   margin: 1rem;
-  color: black;
+  color: white;
   transition: border-bottom-color 0.2s linear; /* Transición suave */
+}
+.element-nav li a:hover {
+  color: #ffff00;
 }
 .element-nav li a::before,
 .element-nav li a::after {
@@ -95,7 +96,7 @@ body {
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: black;
+  background-color: #ffff00;
   transition: width 0.2s linear;
 }
 .element-nav li a::before {
@@ -114,4 +115,34 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+}
+.cart-container {
+  display: flex;
+}
+.cart-element {
+  margin: 0 0.5rem;
+}
+.carrito-compras {
+  position: relative;
+}
+.button-nav {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 4px;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button-nav:hover {
+  background-color: #ffff00;
+  transform: scale(1.1);
+  text-shadow: 10px 10px 25px whitesmoke, -10px 10px 25px whitesmoke,
+    -10px -10px 25px whitesmoke, 10px -10px 25px whitesmoke;
+}
+
+.button-nav:active {
+  background-color: #ffff00;
 }
